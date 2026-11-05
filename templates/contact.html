@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Page - Shopella</title>
+
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
   </head>
 
   <body>
-    <h1>Contact Us</h1>
+    <h1 class="text-center text-warning">Contact Us</h1> <br>
+    <a href="{% url 'index' %}">Home</a> <br>
+    <a href="{% url 'contact' %}">Contact Us</a> <br>
+    <a href="{% url 'services' %}">Our Services</a> <br>
 
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -17,6 +28,31 @@
       Quod, doloremque
     </p>
 
-    <button>Home</button>
+    <table class="table table-bordered">
+      <tr>
+        <th>Full Name</th>
+        <th>Email Address</th>
+        <th>Phone Number</th>
+      </tr>
+
+      <tr class="table-success">
+        <td>John Doe</td>
+        <td>johndoe@gmail.com</td>
+        <td>0712345678</td>
+      </tr>
+
+      <tr class="table-danger">
+        <td>Jane Doe</td>
+        <td>janedoe@gmail.com</td>
+        <td>0712345677</td>
+      </tr>
+
+      <tr>
+        <td>Ken Zoe</td>
+        <td>kenzoe@gmail.com</td>
+        <td>0712345679</td>
+      </tr>
+    </table>
+    
   </body>
 </html>

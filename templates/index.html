@@ -3,14 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Homepage - Shopella</title>
     {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+    <style>
+      img {
+        width: 300px;
+        height: 200px;
+      }
+    </style>
   </head>
 
-  <body> 
-    <h1>Welcome to Shopella</h1>
+  <body>
+    <h1 style="text-align: center">Welcome to Shopella</h1>
 
-    <img src="{% static 'images/car3.png' %}">
+    <button><a href="{% url 'contact' %}">Contact Us</a></button> <br>
+
+    <a href="{% url 'about' %}">About Us</a> <br>
+
+    <a href="/services">Our Services</a> <br>
+    <br><br>
+
+    <img src="{% static 'images/car3.png' %}" />
 
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
